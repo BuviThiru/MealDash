@@ -186,6 +186,59 @@ img {
   font-size: 1.2rem;
 }
 
+.contact-container {
+  height: 80vh;
+  background-color: #9e8bbc;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.form-container {
+  width: 50%;
+  border: 2px solid #573b83;
+  border-radius: 1rem;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  box-shadow: 14px 10px #573b83;
+}
+
+.contact-us {
+  color: #fff;
+  justify-content: center;
+  margin: auto auto 1rem;
+  font-size: 3rem;
+  display: flex;
+}
+
+.form-container input, textarea {
+  border: none;
+  border-radius: .3rem;
+  margin: 1rem;
+  padding: .7rem;
+  font-size: 1.2rem;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.form-container textarea {
+  height: 10rem;
+}
+
+.contact-button {
+  color: #fff;
+  width: 12rem;
+  background-color: #573b83;
+  border: none;
+  border-radius: .3rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
 .shimmerBox {
   height: 350px;
   width: 250px;
