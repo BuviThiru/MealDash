@@ -1,0 +1,8 @@
+NEver create a component inside component  
+Hooks cannot be written inside ifelse..
+useState is the hook used to create local state variables inside components
+Hooks should not be used outside functional components
+
+can we use more than one useEffects? Yes
+
+fomik--package for forms 

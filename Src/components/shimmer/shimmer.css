@@ -1,0 +1,16 @@
+ .shimmerBox{
+    height: 350px;
+    display: flex;
+    width:250px;
+    background-color: rgb(189, 187, 187);
+    margin: 15px;
+    flex-wrap: wrap;
+    border: black solid 1px;
+    border-radius: 10px;
+    
+ }
+
+ .shimmer{
+    display: flex;
+    flex-wrap: wrap;
+ }

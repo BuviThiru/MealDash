@@ -1,0 +1,81 @@
+.eachItem-container{
+    display: flex;
+    justify-content: space-between;
+    border : 0.5px solid rgb(87, 59, 131);
+    padding: 0.5rem;
+    width:70%;
+    margin: 2rem auto;
+    border-radius: 1rem;
+   
+}
+.menuName{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+}
+.menu-category{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+.menu-price{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+   
+}
+.vegIcon{
+    width:2rem;
+    height:2rem;
+    margin-left: 4rem;
+}
+.right-menuitems{
+    display: flex;
+    flex-direction: column;
+}
+.menuImage{
+    height: 7rem;
+    width: 9rem;   
+}
+
+.addBtn{
+    margin: 0.5rem auto;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color:  rgb(87, 59, 131);
+    color: white;
+    border-radius: 0.5rem;
+    border: none;   
+}
+
+
+
+
+.minus{
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color:  rgb(87, 59, 131);
+    color: white; 
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+  
+.count{
+    font-size: 1rem;
+    padding: 0.5rem;  
+    color: white;
+    font-size: 1rem;
+   
+}
+.countDis{
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color:  rgb(87, 59, 131);
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    display: none;
+    width:6rem;
+    margin: 0.5rem auto;
+}

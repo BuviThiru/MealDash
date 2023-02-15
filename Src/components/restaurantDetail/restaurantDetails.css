@@ -1,0 +1,74 @@
+.restaurantDetails{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  
+    
+}
+.top{
+    background-color: black;
+    height:15rem;
+    /* margin: 0; */
+    color: white;
+    display: flex;
+    justify-content:space-around;
+    padding: 1rem 0;
+}
+
+img{
+    border-radius: 10px;
+    height: 14rem;
+}
+.restaDetails{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+}
+.restaName{
+    color:white;
+    font-size: 3rem;
+    
+    letter-spacing: 0.3rem;
+    text-shadow: 0px 1px 0px #ccc,
+                 0px 2px 0px #ccc,
+                 0px 3px 0px #ccc,
+                 0px 4px 0px #ccc,
+                 0px 5px 0px #ccc,
+                 0px 6px 0px #ccc,
+                 0px 7px 0px #ccc; 
+            
+}
+
+.minorDetails{
+    display: flex;
+    align-items: center;
+    
+}
+
+.area{
+    margin-right: 1rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.starBtn{
+    background-color: green;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    
+}
+
+.listMenu{
+    list-style: none;
+}
+
+.rightRest{
+    display: flex;
+    flex-direction: column;
+}
+
+.rightRest ul{
+    display: flex;
+    flex-direction: column;
+    list-style: circle; 
+}

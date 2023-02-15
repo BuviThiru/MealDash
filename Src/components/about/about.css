@@ -1,0 +1,36 @@
+.about-container{
+    background-color:  rgb(158, 139, 188);
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+    color: white;
+}
+.about-details{
+    display: flex;
+    padding: 3rem;
+    align-items: center;
+
+}
+.about-image{
+    width: 20rem;
+    height: 20rem;
+    /* margin-top: 5rem; */
+    margin-left: 2rem;
+}
+.heading{
+    margin: 0;
+   
+}
+.about-right{
+    padding-left: 2rem;
+    /* margin-top: 1rem; */
+}
+.about-head{
+    margin:  0 auto;
+    font-size: 2rem;
+}
+.about-para{
+    font-size: 1.2rem;
+    text-align: justify;
+}

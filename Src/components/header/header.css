@@ -1,0 +1,30 @@
+.header{
+    height: 50px;
+    padding: 10px;
+    background-color:rgb(87, 59, 131);
+    margin:0;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    align-items:center ;
+}
+
+.logo{
+    height:5rem;
+}
+
+.list{
+    display:flex;
+    list-style: none;     
+}
+
+.list li{
+    margin:1.5rem;
+    font-size: 1.3rem;
+ }
+
+.list li a{
+    text-decoration: none;
+    color: white;
+}
+
