@@ -31,7 +31,7 @@ const RestaurantDetail = () => {
 
             </div>
             <div className="bottom">
-                <h2>Menu</h2>
+                <h2 className="rest-heading">Menu</h2>
                 <ul>
                     {Object.values(restaurantDetails?.menu?.items).map((item) => (
                         <li key={item.id} className="listMenu"><MenuItems item ={item} /></li>

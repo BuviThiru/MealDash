@@ -1,6 +1,6 @@
 .about-container{
     background-color:  rgb(158, 139, 188);
-    height: 85vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     padding:1rem;

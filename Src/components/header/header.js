@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
 import logo from "../../utilities/images/logo1.png"
 import './header.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
 function Header() {
     return (
         <section className="header">
@@ -12,7 +15,7 @@ function Header() {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
-                    <li>Cart</li>
+                    <li> <FontAwesomeIcon icon={faShoppingCart} /></li>
 
                 </ul>
             </div>

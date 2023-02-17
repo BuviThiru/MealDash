@@ -3,7 +3,7 @@ body {
 }
 
 .eachItem-container {
-  width: 70%;
+  width: 50%;
   border: .5px solid #573b83;
   border-radius: 1rem;
   justify-content: space-between;
@@ -60,8 +60,12 @@ body {
   cursor: pointer;
   background-color: #573b83;
   border: none;
+  border-radius: 50%;
+  margin-top: 1px;
+  margin-bottom: 2px;
   padding: .5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
 
 .count {
@@ -73,13 +77,15 @@ body {
 .countDis {
   color: #fff;
   width: 6rem;
-  background-color: #573b83;
+  background-color: #5f4785;
   border: none;
   border-radius: .5rem;
-  margin: .5rem auto;
-  padding: .5rem;
+  margin-top: -1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .1rem;
   font-size: 1rem;
-  display: none;
+  display: flex;
 }
 
 .restaurantDetails {
@@ -93,7 +99,7 @@ body {
   color: #fff;
   background-color: #000;
   justify-content: space-around;
-  padding: 1rem 0;
+  padding: 1rem 20%;
   display: flex;
 }
 
@@ -117,6 +123,15 @@ img {
 
 .minorDetails {
   align-items: center;
+  display: flex;
+}
+
+.rest-heading {
+  color: #573b83;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
   display: flex;
 }
 
@@ -147,8 +162,63 @@ img {
   display: flex;
 }
 
+.errImage {
+  width: 50%;
+  height: 50%;
+  margin: 1rem auto;
+  display: flex;
+}
+
+err-container {
+  height: 100vh;
+}
+
+.err-heading {
+  color: red;
+}
+
+.err-data, .err-status {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.err-details {
+  width: 60%;
+  color: #fff;
+  background-color: #9e8bbc;
+  border: 1px solid #573b83;
+  border-radius: 1rem;
+  flex-direction: column;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+}
+
+.errImage1 {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.footer-container {
+  height: 4rem;
+  background-color: #573b83;
+  align-items: center;
+  padding-right: 2rem;
+  display: flex;
+}
+
+.copyright {
+  color: #fff;
+  margin: auto 0 auto auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9rem;
+  font-weight: lighter;
+}
+
 .about-container {
-  height: 85vh;
+  height: 80vh;
   color: #fff;
   background-color: #9e8bbc;
   flex-direction: column;
@@ -187,7 +257,7 @@ img {
 }
 
 .contact-container {
-  height: 80vh;
+  height: 76vh;
   background-color: #9e8bbc;
   flex-direction: column;
   padding: 2rem;

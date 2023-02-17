@@ -3,7 +3,7 @@
     justify-content: space-between;
     border : 0.5px solid rgb(87, 59, 131);
     padding: 0.5rem;
-    width:70%;
+    width:50%;
     margin: 2rem auto;
     border-radius: 1rem;
    
@@ -57,8 +57,12 @@
     background-color:  rgb(87, 59, 131);
     color: white; 
     border: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
+    border-radius: 50%;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    font-weight: bolder;
 }
   
 .count{
@@ -70,12 +74,14 @@
 }
 .countDis{
     font-size: 1rem;
-    padding: 0.5rem;
-    background-color:  rgb(87, 59, 131);
+    padding: 0.1rem;
+    background-color:  rgb(95, 71, 133);
     color: white;
     border-radius: 0.5rem;
     border: none;
-    display: none;
+    display: flex;
     width:6rem;
-    margin: 0.5rem auto;
+  margin-top: -1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
