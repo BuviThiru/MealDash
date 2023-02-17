@@ -10,8 +10,7 @@ const RestaurantDetail = () => {
     let { id } = useParams()
 
     let restaurantDetails = useRestaurant(id)
-    // console.log(restaurantDetails)
-
+    
     if (!restaurantDetails) return null
 
     return (

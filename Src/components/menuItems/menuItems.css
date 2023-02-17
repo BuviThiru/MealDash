@@ -49,12 +49,10 @@
 }
 
 
-
-
 .minus{
     font-size: 1rem;
     padding: 0.5rem;
-    background-color:  rgb(87, 59, 131);
+    background-color:  rgb(129, 217, 129);
     color: white; 
     border: none;
     font-size: 1.2rem;
@@ -75,7 +73,7 @@
 .countDis{
     font-size: 1rem;
     padding: 0.1rem;
-    background-color:  rgb(95, 71, 133);
+    background-color:   rgb(146, 208, 146);
     color: white;
     border-radius: 0.5rem;
     border: none;

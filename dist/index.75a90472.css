@@ -58,7 +58,7 @@ body {
 .minus {
   color: #fff;
   cursor: pointer;
-  background-color: #573b83;
+  background-color: #81d981;
   border: none;
   border-radius: 50%;
   margin-top: 1px;
@@ -77,7 +77,7 @@ body {
 .countDis {
   color: #fff;
   width: 6rem;
-  background-color: #5f4785;
+  background-color: #92d092;
   border: none;
   border-radius: .5rem;
   margin-top: -1rem;
@@ -99,7 +99,7 @@ body {
   color: #fff;
   background-color: #000;
   justify-content: space-around;
-  padding: 1rem 20%;
+  padding: 1rem 10%;
   display: flex;
 }
 
@@ -287,6 +287,7 @@ err-container {
   border-radius: .3rem;
   margin: 1rem;
   padding: .7rem;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
 }
 

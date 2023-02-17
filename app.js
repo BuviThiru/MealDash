@@ -9,13 +9,18 @@ import About from "./Src/components/about/About"
 import Footer from "./Src/components/Footer/Footer"
 import Error from "./Src/components/error/Error"
 import RestaurantDetail from './Src/components/restaurantDetail/RestaurantDetail'
+import { Provider } from "react-redux"
+import store from "./Src/utilities/store"
+
 
 function AppLayOut() {
     return (
         <>
+            <Provider store={store}>
             <Header />
             <Outlet />
             <Footer />
+            </Provider>
         </>
     )
 }
