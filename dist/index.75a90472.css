@@ -2,6 +2,39 @@ body {
   margin: 0;
 }
 
+.menu-card {
+  width: 12rem;
+  height: 14rem;
+  border: 1px solid #573b83;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 1rem;
+  display: flex;
+}
+
+.menu-name {
+  color: #573b83;
+}
+
+.menu-desc {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.vegIcon1 {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 4rem;
+}
+
+.cartItem-container {
+  height: 80vh;
+  border: 1px solid #573b83;
+  border-radius: 2rem;
+  margin: 1rem;
+  display: flex;
+}
+
 .eachItem-container {
   width: 50%;
   border: .5px solid #573b83;
@@ -50,7 +83,9 @@ body {
   background-color: #573b83;
   border: none;
   border-radius: .5rem;
-  margin: .5rem auto;
+  margin-top: -1rem;
+  margin-left: auto;
+  margin-right: auto;
   padding: .5rem;
   font-size: 1rem;
 }
@@ -205,12 +240,14 @@ err-container {
   height: 4rem;
   background-color: #573b83;
   align-items: center;
-  padding-right: 2rem;
+  padding-right: 5rem;
   display: flex;
 }
 
 .copyright {
   color: #fff;
+  word-spacing: .3rem;
+  letter-spacing: .1rem;
   margin: auto 0 auto auto;
   font-family: Arial, Helvetica, sans-serif;
   font-size: .9rem;

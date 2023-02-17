@@ -3,7 +3,7 @@
     height: 4rem;
     display: flex;
     align-items: center;
-    padding-right: 2rem;
+    padding-right: 5rem;
 }
 
 .copyright{
@@ -12,4 +12,6 @@
     font-weight: lighter;
     font-size: 0.9rem;
     margin: auto 0 auto  auto;
+    word-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
 }

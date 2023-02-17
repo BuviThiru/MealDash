@@ -5,11 +5,16 @@ import nonveg from '../../utilities/images/nonveg.png'
 import defaultMenu from '../../utilities/images/menu1.jpg'
 import './menuItems.css'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addItem } from '../../utilities/slice'
+
+
 const MenuItems = ({ item }) => {
     let [count, setCount] = useState(0)
+    const dispatch = useDispatch()
 
-    function handleClick() {
-        setCount(count++)
+    function handleClick(item) {
+       dispatch(addItem(item))
     }
     function handleMinus(){
         setCount((prev)=> prev--)
@@ -32,8 +37,8 @@ const MenuItems = ({ item }) => {
             <div className='right-menuitems'>
                 {item.cloudinaryImageId && <img src={menu_img + item.cloudinaryImageId} alt="ResataurantImage" className='menuImage' />}
                 {!item.cloudinaryImageId && <img src={defaultMenu} alt="ResataurantImage" className='menuImage' />}
-                <button className='addBtn' onClick={handleClick} style={{ display: { count } != 0 ? "none" : "block" }}>ADD</button>
-                <button className='countDis' style={{ display: { count } == 0 ? "none" : "block" }}><button onClick={console.log(" clicked -")} className='minus'>-</button><span className='count'>{count}</span><button className='minus' onClick={handlePlus}>+</button></button>
+                <button className='addBtn' onClick={()=>handleClick(item)}>ADD</button>
+                {/* <button className='countDis' style={{ display: { count } == 0 ? "none" : "block" }}><button onClick={console.log(" clicked -")} className='minus'>-</button><span className='count'>{count}</span><button className='minus' onClick={handlePlus}>+</button></button> */}
         </div>
         </div >
     )

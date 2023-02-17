@@ -39,7 +39,9 @@
 }
 
 .addBtn{
-    margin: 0.5rem auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1rem;
     font-size: 1rem;
     padding: 0.5rem;
     background-color:  rgb(87, 59, 131);
