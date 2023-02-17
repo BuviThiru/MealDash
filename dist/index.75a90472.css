@@ -3,21 +3,33 @@ body {
 }
 
 .menu-card {
-  width: 12rem;
+  width: 10rem;
   height: 14rem;
-  border: 1px solid #573b83;
+  border-radius: 1rem;
   flex-flow: column wrap;
-  align-items: center;
   margin: 1rem;
+  padding: .5rem;
   display: flex;
+  box-shadow: 0 50px 100px -20px #32325d40, 0 30px 60px -30px #0000004d, inset 0 -2px 6px #0a254059;
 }
 
 .menu-name {
   color: #573b83;
+  margin-top: .2rem;
+  font-size: 1.15rem;
+  font-weight: bolder;
 }
 
 .menu-desc {
   flex-wrap: wrap;
+  margin-top: .4rem;
+  font-style: oblique;
+  display: flex;
+}
+
+.price-details {
+  align-items: center;
+  margin-top: .5rem;
   display: flex;
 }
 
@@ -28,11 +40,74 @@ body {
 }
 
 .cartItem-container {
-  height: 80vh;
+  min-height: 80vh;
   border: 1px solid #573b83;
   border-radius: 2rem;
+  flex-wrap: wrap;
   margin: 1rem;
   display: flex;
+}
+
+.total {
+  height: 3rem;
+  min-width: 7rem;
+  color: #fff;
+  background-color: #573b83;
+  border: none;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  display: block;
+}
+
+.button-container {
+  height: 60%;
+  width: 60%;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.empty-cart {
+  height: 50vh;
+  margin-bottom: 2rem;
+}
+
+.empty-cart-container {
+  height: 85vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.go-home {
+  color: #573b83;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home1 {
+  color: green;
+  font-weight: bolder;
+}
+
+.blink {
+  animation: 1s linear infinite blink;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .eachItem-container {
@@ -390,6 +465,7 @@ input:focus {
 }
 
 .map {
+  min-height: 75vh;
   background-color: #efefef;
   flex-wrap: wrap;
   justify-content: center;
@@ -521,6 +597,25 @@ h3, h4, h5 {
 .list li a {
   color: #fff;
   text-decoration: none;
+}
+
+.cart-container {
+  display: inline-block;
+  position: relative;
+}
+
+.cart-value {
+  color: #573b83;
+  width: .8rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 6px;
+  font-size: .7rem;
+  position: absolute;
+  top: 12px;
 }
 
 /*# sourceMappingURL=index.75a90472.css.map */

@@ -17,7 +17,7 @@ const Body = () => {
     async function getData() {
         let data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.933524&lng=76.9311761&page_type=DESKTOP_WEB_LISTING")
         let json = await data.json()
-        // console.log(">>>>>>>>>>>>>>>",json)
+        console.log(">>>>>>>>>>>>>>>",json)
         let array = json?.data?.cards[1]?.data?.data?.cards
         setAllrestaurants(array)
         setFilteredRestaurants(array)

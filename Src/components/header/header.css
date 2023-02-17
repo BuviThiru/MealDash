@@ -28,3 +28,25 @@
     color: white;
 }
 
+.cart-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .cart-value {
+    position: absolute;
+    top: 12px;
+    /* right:-1px; */
+    background-color: white;
+    color:rgb(87, 59, 131);
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 0.7rem;
+    width:0.8rem;
+    align-items: center;
+  text-align: center;
+  }
+  
+  .cart-value{
+    margin-bottom: 1rem;
+  }

@@ -2,19 +2,39 @@ import './cart.css'
 
 let menu_img = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/"
 
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import FoodDetail from '../foodDetail/FoodDetail'
+import emptyCart from './../../utilities/images/emptyCart.png'
+import { Link } from 'react-router-dom'
+import { clearCart } from '../../utilities/slice'
 
 
 
 const Cart = () => {
-    const cartItems = useSelector(store  => store.cart.items)
-    console.log(">>>>>>>>>>>>>",cartItems[1])
-   
+    
+    const cartItems = useSelector(store => store.cart.items)
+    const dispatch = useDispatch()
+    function handleClick(){
+        dispatch(clearCart())
+    }
+    let length = cartItems.length
+    let total = 0;
+    if(!length) return (<div className='empty-cart-container'><img src = {emptyCart} className="empty-cart"/>
+    <div className='go-home'>Add your favourite food items 🡆 <Link to ="/"><span className='home1 blink'>HOME</span></Link></div>
+    </div>)
     return (
-        <div className='cartItem-container'>
-            {cartItems.map((cartItem)=> <FoodDetail cartItem={cartItem}/>)}
+
+        <div className='cartItem-container'>           
+            {cartItems.map(function (cartItem) { total = total + (cartItem.price) / 100; return <FoodDetail cartItem={cartItem} /> })}
+            <div className='.button-container'>
+                
+                <button className='total'>Total : {total}</button>
+                <button className='total' onClick = {handleClick}> Reset</button>
+            </div>
         </div>
+
+
     )
 }
+
 export default Cart
