@@ -6,27 +6,40 @@ import defaultMenu from '../../utilities/images/menu1.jpg'
 import './menuItems.css'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addItem } from '../../utilities/slice'
+import { addItem, removeItem } from '../../utilities/slice'
+import { useSelector } from 'react-redux'
+
 
 
 const MenuItems = ({ item }) => {
+
+   
     let [count, setCount] = useState(0)
     const dispatch = useDispatch()
 
-    function handleClick(item) {
-       dispatch(addItem(item))
-    }
-    function handleMinus(){
-        setCount((prev)=> prev--)
-    }
     function handlePlus(){
-        setCount((prev)=> prev++)
+        dispatch(addItem(item))
+        setCount(count+1)
     }
-    // console.log(item);
+
+    function handleAddItem(item) {
+    //    console.log("Clicked" ,count)
+       dispatch(addItem(item))
+       setCount(count+1)
+    }
+
+    function handleMinus(){
+          if(count>0){           
+            dispatch(removeItem(item.id))
+            setCount(count-1)
+          }
+         
+    }
+    // console.log(item)
     let price = item.price
     return (
         <div className='eachItem-container'>
-            <div classname = "right-menulist">
+            <div className = "right-menulist">
                 <div className='menuName'>{item.name}</div>
                 <div className='menu-category'>Category:{item.category}</div>
                 <div className='menu-price'>
@@ -37,8 +50,8 @@ const MenuItems = ({ item }) => {
             <div className='right-menuitems'>
                 {item.cloudinaryImageId && <img src={menu_img + item.cloudinaryImageId} alt="ResataurantImage" className='menuImage' />}
                 {!item.cloudinaryImageId && <img src={defaultMenu} alt="ResataurantImage" className='menuImage' />}
-                <button className='addBtn' onClick={()=>handleClick(item)}>ADD</button>
-                {/* <button className='countDis' style={{ display: { count } == 0 ? "none" : "block" }}><button onClick={console.log(" clicked -")} className='minus'>-</button><span className='count'>{count}</span><button className='minus' onClick={handlePlus}>+</button></button> */}
+                {count ==0 && <button className='addBtn' onClick={()=>handleAddItem(item)}>ADD</button>}
+                {count>0 && <button className='countDis'><div  onClick ={()=>handleMinus(item)} className='minus'>-</div><span className='count'>{count}</span><div onClick = {()=>handlePlus(item)} className='minus'>+</div></button>}
         </div>
         </div >
     )

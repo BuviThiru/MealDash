@@ -25,7 +25,7 @@ const Cart = () => {
     return (
 
         <div className='cartItem-container'>           
-            {cartItems.map(function (cartItem) { total = total + (cartItem.price) / 100; return <FoodDetail cartItem={cartItem} /> })}
+            {cartItems.map(function (cartItem,index) { total = total + (cartItem.price) / 100; return <FoodDetail key ={index} cartItem={cartItem} /> })}
             <div className='.button-container'>
                 
                 <button className='total'>Total : {total}</button>

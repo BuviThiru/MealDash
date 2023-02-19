@@ -10,7 +10,7 @@ const Cards = ({item})=>{
             <img src={imgURL+item.data.cloudinaryImageId} alt="restaurantImages" />
             <div className="details">
             <h3 className="restName">{item.data.name}</h3>
-            <div className="cuisins">{arr.map((key)=> {return <h3 className="cusinItems">•{key}</h3>})}</div>
+            <div className="cuisins">{arr.map((keys,index)=> {return <h3 key ={index} className="cusinItems">•{keys}</h3>})}</div>
             <h3 className="place">{item.data.area}</h3>
             </div>
             <div className="bottomline">

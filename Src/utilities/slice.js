@@ -8,11 +8,15 @@ const cartSlice = createSlice({
     reducers:{
         addItem :(state,action) =>{
             state.items.push(action.payload)
-            // console.log(items)
+           
         },
         removeItem :(state,action)=>{
-            state.items.pop()
-        },
+            // console.log(">>>>>>>>>>APYLOAD",action.payload)
+            let indexVal = state.items.find(obj => obj.id === action.payload)
+            console.log(indexVal)
+            if (indexVal !== -1) {
+                state.items.splice(indexVal, 1);
+        }},
         clearCart :(state, action)=>{
             state.items = []
         },

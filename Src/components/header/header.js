@@ -7,7 +7,7 @@ import { useSelector } from "react-redux"
 
 function Header() {
     const cartItems = useSelector(store =>store.cart.items)
-    console.log(cartItems)
+    // console.log(cartItems)
     return (
         <section className="header">
             <div>
