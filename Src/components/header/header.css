@@ -41,10 +41,11 @@
     color:rgb(87, 59, 131);
     border-radius: 50%;
     padding: 6px;
-    font-size: 0.7rem;
+    font-size: 1rem;
     width:0.8rem;
     align-items: center;
   text-align: center;
+  font-weight: bolder;
   }
   
   .cart-value{

@@ -1,5 +1,5 @@
-import { imgURL } from '../../utilities/constants'
-let menu_img = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/"
+import { imgURL,menu_img } from '../../utilities/constants'
+
 import veg from '../../utilities/images/veg.png'
 import nonveg from '../../utilities/images/nonveg.png'
 import defaultMenu from '../../utilities/images/menu1.jpg'
