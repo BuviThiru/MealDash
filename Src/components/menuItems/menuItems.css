@@ -84,4 +84,7 @@
   margin-top: -1rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
 }

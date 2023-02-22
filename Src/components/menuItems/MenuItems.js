@@ -7,13 +7,15 @@ import './menuItems.css'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addItem, removeItem } from '../../utilities/slice'
-import { useSelector } from 'react-redux'
+
+import { useEffect } from 'react'
+
 
 
 
 const MenuItems = ({ item }) => {
 
-   
+      
     let [count, setCount] = useState(0)
     const dispatch = useDispatch()
 

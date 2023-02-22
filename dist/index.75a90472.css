@@ -190,10 +190,11 @@ body {
   background-color: #92d092;
   border: none;
   border-radius: .5rem;
+  align-items: center;
   margin-top: -1rem;
   margin-left: auto;
   margin-right: auto;
-  padding: .1rem;
+  padding: .5rem;
   font-size: 1rem;
   display: flex;
 }

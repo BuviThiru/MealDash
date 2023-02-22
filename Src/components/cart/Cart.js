@@ -7,13 +7,17 @@ import FoodDetail from '../foodDetail/FoodDetail'
 import emptyCart from './../../utilities/images/emptyCart.png'
 import { Link } from 'react-router-dom'
 import { clearCart } from '../../utilities/slice'
-
+import { useEffect } from 'react'
+import {useHistory} from 'react-router-dom'
 
 
 const Cart = () => {
     
+    
     const cartItems = useSelector(store => store.cart.items)
     const dispatch = useDispatch()
+
+
     function handleClick(){
         dispatch(clearCart())
     }
