@@ -3,6 +3,7 @@
     height:76vh;
     flex-direction: column;
     padding:2rem;
+    margin-top: 70px;
 }
 .form-container{
     display: flex;

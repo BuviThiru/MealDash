@@ -8,32 +8,35 @@ import emptyCart from './../../utilities/images/emptyCart.png'
 import { Link } from 'react-router-dom'
 import { clearCart } from '../../utilities/slice'
 import { useEffect } from 'react'
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 
 const Cart = () => {
-    
-    
+
+
     const cartItems = useSelector(store => store.cart.items)
     const dispatch = useDispatch()
 
 
-    function handleClick(){
+    function handleClick() {
         dispatch(clearCart())
     }
     let length = cartItems.length
     let total = 0;
-    if(!length) return (<div className='empty-cart-container'><img src = {emptyCart} className="empty-cart"/>
-    <div className='go-home'>Add your favourite food items 🡆 <Link to ="/"><span className='home1 blink'>HOME</span></Link></div>
+    if (!length) return (<div className='empty-cart-container'><img src={emptyCart} className="empty-cart" />
+        <div className='go-home'>Add your favourite food items 🡆 <Link to="/"><span className='home1 blink'>HOME</span></Link></div>
     </div>)
     return (
 
-        <div className='cartItem-container'>           
-            {cartItems.map(function (cartItem,index) { total = total + (cartItem.price) / 100; return <FoodDetail key ={index} cartItem={cartItem} /> })}
-            <div className='.button-container'>
-                
+        <div className='cartItem-container'>
+            <div className='cart-left'>
+              
+                {cartItems.map(function (cartItem, index) { total = total + (cartItem.price) / 100; return <FoodDetail key={index} cartItem={cartItem} /> })}
+            
+                </div>
+            <div className='cart-right'>
                 <button className='total'>Total : {total}</button>
-                <button className='total' onClick = {handleClick}> Reset</button>
+                <button className='total' onClick={handleClick}> Reset</button>
             </div>
         </div>
 

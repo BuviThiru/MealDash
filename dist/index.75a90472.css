@@ -3,14 +3,14 @@ body {
 }
 
 .menu-card {
-  width: 10rem;
-  height: 15rem;
+  width: 30rem;
+  height: 7rem;
+  border: 1px solid #573b83;
   border-radius: 1rem;
   flex-flow: column wrap;
   margin: 1rem;
   padding: .5rem;
   display: flex;
-  box-shadow: 0 50px 100px -20px #32325d40, 0 30px 60px -30px #0000004d, inset 0 -2px 6px #0a254059;
 }
 
 .menu-name {
@@ -41,10 +41,20 @@ body {
 
 .cartItem-container {
   min-height: 80vh;
-  border: 1px solid #573b83;
+  width: 70%;
   border-radius: 2rem;
-  flex-wrap: wrap;
-  margin: 1rem;
+  margin: 70px auto 1rem;
+  display: flex;
+}
+
+.cart-left {
+  width: 60%;
+  flex-flow: column wrap;
+  display: flex;
+}
+
+.cart-right {
+  flex-direction: column;
   display: flex;
 }
 
@@ -200,8 +210,9 @@ body {
 }
 
 .restaurantDetails {
+  min-height: 80vh;
   flex-direction: column;
-  margin: 0;
+  margin: 70px 0 0;
   display: flex;
 }
 
@@ -373,6 +384,7 @@ err-container {
   height: 76vh;
   background-color: #9e8bbc;
   flex-direction: column;
+  margin-top: 70px;
   padding: 2rem;
 }
 
@@ -425,8 +437,8 @@ textarea:focus {
 
 .shimmerBox {
   height: 350px;
-  width: 250px;
-  background-color: #bdbbbb;
+  width: 18rem;
+  background-color: #d3d3d3;
   border: 1px solid #000;
   border-radius: 10px;
   flex-wrap: wrap;
@@ -436,7 +448,15 @@ textarea:focus {
 
 .shimmer {
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10rem;
   display: flex;
+}
+
+.topBox {
+  height: 40rem;
+  width: 100%;
+  background-color: gray;
 }
 
 .body {
@@ -448,6 +468,7 @@ textarea:focus {
 .topBody {
   justify-content: center;
   align-items: center;
+  margin-top: 70px;
   padding: 20px;
   display: flex;
 }
@@ -535,7 +556,7 @@ h3, h4, h5 {
   border: none;
   border-radius: .3rem;
   margin: 0;
-  padding: 3px;
+  padding: 3px 4px;
   font-size: 1rem;
 }
 
@@ -573,12 +594,15 @@ h3, h4, h5 {
 .header {
   height: 50px;
   color: #fff;
+  width: 100%;
   background-color: #573b83;
   justify-content: space-around;
   align-items: center;
   margin: 0;
   padding: 10px;
   display: flex;
+  position: fixed;
+  top: 0;
 }
 
 .logo {

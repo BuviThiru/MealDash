@@ -3,10 +3,13 @@ import {Restaurant_Details_URl} from './constants'
 
 const useRestaurant =(id)=>{
   
-    const [restaurantDetails, setRestaurentDetails] = useState (null)  
+    const [restaurantDetails, setRestaurentDetails] = useState (null) 
+    const [isLoading, setIsloading] = useState(true)
+     
     
     useEffect((() => {
         fetchData()
+        setIsloading(false)
     }), [])
 
     async function fetchData() {
@@ -15,7 +18,7 @@ const useRestaurant =(id)=>{
         
         setRestaurentDetails(json.data)
     }
-    return restaurantDetails
+    return [restaurantDetails ,isLoading]
 
 }
 export default useRestaurant

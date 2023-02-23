@@ -4,16 +4,18 @@ import { Restaurant_Details_URl, imgURL } from '../../utilities/constants'
 import useRestaurant from "../../utilities/useRestaurant"
 import './restaurantDetails.css'
 import MenuItems from "../menuItems/MenuItems"
+import Shimmer2 from "../shimmer/Shimmer2"
 
 
 const RestaurantDetail = () => {
-    let { id } = useParams()
 
-    let restaurantDetails = useRestaurant(id)
-    
+    let { id } = useParams()
+    let loading = true
+    let [restaurantDetails ,isLoading ]= useRestaurant(id)
+     loading = isLoading
     if (!restaurantDetails) return null
 
-    return (
+    return ( !restaurantDetails? <Shimmer2 />:
         <div className="restaurantDetails">
             <div className="top">
                 <img src={imgURL + restaurantDetails?.cloudinaryImageId} alt="ResataurantImage" />
