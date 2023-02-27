@@ -1,6 +1,6 @@
 .cartItem-container{
     display: flex;
-    min-height:80vh;
+    min-height:83vh;
     margin:1rem;
     border-radius: 2rem;  
     margin-top: 70px;
@@ -47,7 +47,7 @@
      
   }
   .empty-cart-container{
-    height:85vh;
+    min-height:92.8vh;
     display: flex;
     align-items: center;
     justify-content: center;

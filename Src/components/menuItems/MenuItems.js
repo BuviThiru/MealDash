@@ -26,7 +26,7 @@ const MenuItems = ({ item }) => {
     }
     function getQuantityById(id) {
         const item = cartItems.find((item) => item.id === id);
-        return item ? item.quantity : "ADD" ;
+        return item ? item.quantity : "Add" ;
       }
 
     let price = item.price
@@ -34,7 +34,7 @@ const MenuItems = ({ item }) => {
 
     return (
         <div className='eachItem-container'>
-            <div className="right-menulist">
+            <div className="left-menulist">
                 <div className='menuName'>{item.name}</div>
                 <div className='menu-category'>Category:{item.category}</div>
                 <div className='menu-price'>
@@ -45,8 +45,6 @@ const MenuItems = ({ item }) => {
             <div className='right-menuitems'>
                 {item.cloudinaryImageId && <img src={menu_img + item.cloudinaryImageId} alt="ResataurantImage" className='menuImage' />}
                 {!item.cloudinaryImageId && <img src={defaultMenu} alt="ResataurantImage" className='menuImage' />}
-
-
                 {<button className='countDis'><div onClick={() => handleMinus(item)} className='minus'>-</div><span className='count'>{getQuantityById(item.id)}</span><div onClick={() => handleAddItem(item)} className='minus'>+</div></button>}
             </div>
         </div >

@@ -1,21 +1,37 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { Restaurant_Details_URl, imgURL } from '../../utilities/constants'
 import useRestaurant from "../../utilities/useRestaurant"
 import './restaurantDetails.css'
 import MenuItems from "../menuItems/MenuItems"
 import Shimmer2 from "../shimmer/Shimmer2"
+import { useDispatch, useSelector } from 'react-redux'
+import { addItem, removeItem } from '../../utilities/slice'
 
 
 const RestaurantDetail = () => {
-
+    const cartItems = useSelector(store => store.cart.items)
+    const dispatch = useDispatch()
     let { id } = useParams()
     let loading = true
-    let [restaurantDetails ,isLoading ]= useRestaurant(id)
-     loading = isLoading
+    function handleAddItem(cartItem) {
+        dispatch(addItem(cartItem))
+    }
+
+    function handleMinus(cartItem) {
+        dispatch(removeItem(cartItem.id))
+    }
+    let [restaurantDetails, isLoading] = useRestaurant(id)
+    loading = isLoading
+   
+    let total = 0;
+
     if (!restaurantDetails) return null
 
-    return ( !restaurantDetails? <Shimmer2 />:
+    const totalQuantity = cartItems.reduce((total, item) => {
+        return total + item.quantity;
+      }, 0);
+    return (!restaurantDetails ? <Shimmer2 /> :
         <div className="restaurantDetails">
             <div className="top">
                 <img src={imgURL + restaurantDetails?.cloudinaryImageId} alt="ResataurantImage" />
@@ -32,14 +48,36 @@ const RestaurantDetail = () => {
 
             </div>
             <div className="bottom">
-                <h2 className="rest-heading">Menu</h2>
-                <ul>
-                    {Object.values(restaurantDetails?.menu?.items).map((item) => (
-                        <li key={item.id} className="listMenu"><MenuItems item ={item} /></li>
-                    ))}
-                </ul>
+                <div className="restdetails-left">
+                    <h2 className="rest-heading">Menu</h2>
+                    <ul>
+                        {Object.values(restaurantDetails?.menu?.items).map((item) => (
+                            <li key={item.id} className="listMenu"><MenuItems item={item} /></li>
+                        ))}
+                    </ul>
+                </div>
+                {!cartItems.length>0 ?  <h2 className="reatdetails-right"> Add Items to the Cart </h2>:<div className="reatdetails-right">
+                    <h2 className="rest-cart-heading">Items in Cart -{totalQuantity }</h2>
+                    {cartItems.map(function (cartItem, index) { total = total + (cartItem.price) / 100 * cartItem.quantity })}
+                    <div className="rest-cart-container">{cartItems.map((cartItem) => <>
+                        <h3 className="rest-cart-itemname">{cartItem.name}</h3>
+                        <h4 className="rest-cart-price">Price : ₹{cartItem.price / 100} each</h4>
+                        <div className="rest-cart-itemdetails">
+                            <button className='countDis btn-cart'><div onClick={() => handleMinus(cartItem)} className='minus'>-</div><div className='count'>{cartItem.quantity}</div><div onClick={() => handleAddItem(cartItem)} className='minus'>+</div></button>
+                            <div>₹{cartItem.price * cartItem.quantity / 100}</div>
+                            
+                        </div>
+                        <hr style={{borderTop: '1px solid black', width: '100%'}}/>                 
+                      
+                    </>)}
+                    </div>
+                    <div className="rest-cart-total">Total : {total}</div>
+                    <Link to="/cart"><button className="go-to-cart">Go to Cart</button></Link>
+
+                </div>}
+
             </div>
         </div>
     )
 }
-export default RestaurantDetail
+export default RestaurantDetail 

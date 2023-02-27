@@ -40,7 +40,7 @@ body {
 }
 
 .cartItem-container {
-  min-height: 80vh;
+  min-height: 83vh;
   width: 70%;
   border-radius: 2rem;
   margin: 70px auto 1rem;
@@ -84,7 +84,7 @@ body {
 }
 
 .empty-cart-container {
-  height: 85vh;
+  min-height: 92.8vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -165,7 +165,7 @@ body {
 
 .addBtn {
   color: #fff;
-  background-color: #573b83;
+  background-color: #a28dc4;
   border: none;
   border-radius: .5rem;
   margin-top: -1rem;
@@ -178,7 +178,7 @@ body {
 .minus {
   color: #fff;
   cursor: pointer;
-  background-color: #81d981;
+  background-color: #a28dc4;
   border: none;
   border-radius: 50%;
   margin-top: 1px;
@@ -196,7 +196,7 @@ body {
 
 .countDis {
   color: #fff;
-  background-color: #92d092;
+  background-color: #a28dc4;
   border: none;
   border-radius: .5rem;
   justify-content: center;
@@ -206,6 +206,10 @@ body {
   margin-right: auto;
   padding: .2rem;
   font-size: 1rem;
+  display: flex;
+}
+
+.bodylower {
   display: flex;
 }
 
@@ -281,6 +285,76 @@ img {
 .rightRest ul {
   flex-direction: column;
   list-style: circle;
+  display: flex;
+}
+
+.bottom {
+  display: flex;
+}
+
+.restdetails-left {
+  width: 70%;
+}
+
+.reatdetails-right {
+  width: 30%;
+  background-color: #cbc5d5;
+  flex-direction: column;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+}
+
+.rest-cart-heading {
+  margin: 0 auto;
+}
+
+.rest-cart-container {
+  flex-direction: column;
+  padding: 1rem;
+  display: flex;
+}
+
+.rest-cart-itemname {
+  color: #fff;
+  margin: .5rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.rest-cart-price {
+  margin-bottom: 2rem;
+}
+
+.rest-cart-itemdetails {
+  width: 2rem;
+  justify-content: baseline;
+  flex-direction: row;
+  display: flex;
+}
+
+.btn-cart {
+  margin-right: 5rem;
+}
+
+.rest-cart-total {
+  color: #f0f8ff;
+  justify-content: end;
+  align-items: end;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  display: flex;
+}
+
+.go-to-cart {
+  color: #fff;
+  background-color: #a28dc4;
+  border: none;
+  border-radius: .5rem;
+  margin: auto;
+  padding: 1rem;
+  font-size: 1rem;
   display: flex;
 }
 

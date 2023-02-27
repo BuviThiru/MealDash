@@ -20,7 +20,7 @@ const Cart = () => {
     function handleClick() {
         dispatch(clearCart())
     }
-    console.log(cartItems)
+    // console.log(cartItems)
     let length = cartItems.length
     let total = 0;
     if (!length) return (<div className='empty-cart-container'><img src={emptyCart} className="empty-cart" />
@@ -36,7 +36,7 @@ const Cart = () => {
                 </div>
             <div className='cart-right'>
                 <button className='total'>Total : {total}</button>
-                <button className='total' onClick={handleClick}> Reset</button>
+                <button className='total' onClick={handleClick}> Clear Cart</button>
             </div>
         </div>
 
