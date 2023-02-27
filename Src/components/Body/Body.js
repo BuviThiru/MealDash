@@ -31,18 +31,15 @@ const Body = () => {
         <>
             <div className="body">
                 <div className="topBody">
-                    <input placeholder="Search..." className="search" value={searchData} onChange={(event) => setSearchData(event.target.value)} />
-                    <button className="search-button" onClick={() => {
-                        let data = filterRestaurant(searchData, allrestaurants)
-                        setFilteredRestaurants(data)
-                        setSearchData("")
-                    }}>Click</button>
+                    <input placeholder="Search..." className="search" value={searchData} onChange={(event) => {setSearchData(event.target.value);
+                    const data = filterRestaurant(event.target.value, allrestaurants);
+                    setFilteredRestaurants(data)} }/>               
                 </div>
                 <div className="map">
-                    {/* {console.log(">>>>>>>>>>>>>>>>>>>>>>",allrestaurants)} */}
+                 
                     {(filteredRestaurants.length===0)?  <h1>No Match Found</h1> :
                     filteredRestaurants.map((item) => {
-                        // console.log(item.data.id)
+                   
                         return (                            
                            <Link key={item.data.id} to={"/restaurant/" + item.data.id}> <Cards item={item}  /></Link>
                         )
