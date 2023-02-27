@@ -80,11 +80,12 @@
     border-radius: 0.5rem;
     border: none;
     display: flex;
-    width:6rem;
+    /* width:7rem; */
   margin-top: -1rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5rem;
+  padding: 0.2rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }

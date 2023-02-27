@@ -1,4 +1,4 @@
-import { imgURL,menu_img } from '../../utilities/constants'
+import { imgURL, menu_img } from '../../utilities/constants'
 
 import veg from '../../utilities/images/veg.png'
 import nonveg from '../../utilities/images/nonveg.png'
@@ -15,38 +15,40 @@ import { useEffect } from 'react'
 
 const MenuItems = ({ item }) => {
 
-     const cartItems = useSelector(store => store.cart.items) 
-    //  console.log(item.id)  
-     
- 
     const dispatch = useDispatch()
-
-
-    function handleAddItem(item) {  
-       dispatch(addItem(item))     
+    const cartItems = useSelector(store => store.cart.items)
+    function handleAddItem(item) {
+        dispatch(addItem(item))
     }
 
-    function handleMinus(){                   
-            dispatch(removeItem(item.id))      
-         }
-  
+    function handleMinus() {
+        dispatch(removeItem(item.id))
+    }
+    function getQuantityById(id) {
+        const item = cartItems.find((item) => item.id === id);
+        return item ? item.quantity : "ADD" ;
+      }
+
     let price = item.price
+    
+
     return (
         <div className='eachItem-container'>
-            <div className = "right-menulist">
+            <div className="right-menulist">
                 <div className='menuName'>{item.name}</div>
                 <div className='menu-category'>Category:{item.category}</div>
                 <div className='menu-price'>
                     <div>₹ {price / 100}</div>
                     <div>{item.isVeg ? <img src={veg} className="vegIcon" /> : <img src={nonveg} className="vegIcon" />}</div>
                 </div>
-            </div> 
+            </div>
             <div className='right-menuitems'>
                 {item.cloudinaryImageId && <img src={menu_img + item.cloudinaryImageId} alt="ResataurantImage" className='menuImage' />}
                 {!item.cloudinaryImageId && <img src={defaultMenu} alt="ResataurantImage" className='menuImage' />}
-                {cartItems?.filter((x) => x.id == item.id).length == 0 && <button className='addBtn' onClick={()=>handleAddItem(item)}>ADD</button>}
-                {cartItems?.filter((x) => x.id == item.id).length != 0 && <button className='countDis'><div  onClick ={()=>handleMinus(item)} className='minus'>-</div><span className='count'>{cartItems?.filter((x) => x.id == item.id).length}</span><div onClick = {()=>handleAddItem(item)} className='minus'>+</div></button>}
-        </div>
+
+
+                {<button className='countDis'><div onClick={() => handleMinus(item)} className='minus'>-</div><span className='count'>{getQuantityById(item.id)}</span><div onClick={() => handleAddItem(item)} className='minus'>+</div></button>}
+            </div>
         </div >
     )
 }

@@ -7,8 +7,7 @@ import FoodDetail from '../foodDetail/FoodDetail'
 import emptyCart from './../../utilities/images/emptyCart.png'
 import { Link } from 'react-router-dom'
 import { clearCart } from '../../utilities/slice'
-import { useEffect } from 'react'
-import { useHistory } from 'react-router-dom'
+
 
 
 const Cart = () => {
@@ -21,6 +20,7 @@ const Cart = () => {
     function handleClick() {
         dispatch(clearCart())
     }
+    console.log(cartItems)
     let length = cartItems.length
     let total = 0;
     if (!length) return (<div className='empty-cart-container'><img src={emptyCart} className="empty-cart" />
@@ -31,7 +31,7 @@ const Cart = () => {
         <div className='cartItem-container'>
             <div className='cart-left'>
               
-                {cartItems.map(function (cartItem, index) { total = total + (cartItem.price) / 100; return <FoodDetail key={index} cartItem={cartItem} /> })}
+                {cartItems.map(function (cartItem, index) { total = total + (cartItem.price) / 100*cartItem.quantity; return <FoodDetail key={index} cartItem={cartItem} /> })}
             
                 </div>
             <div className='cart-right'>

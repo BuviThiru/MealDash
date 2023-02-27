@@ -39,10 +39,10 @@ const Body = () => {
                     }}>Click</button>
                 </div>
                 <div className="map">
-                    {/* {console.log(">>>>>>>>>>>>>>>>>>>>>>",allrestaurants)} */}
+                   
                     {(filteredRestaurants.length===0)?  <h1>No Match Found</h1> :
                     filteredRestaurants.map((item) => {
-                        // console.log(item.data.id)
+                       
                         return (                            
                            <Link key={item.data.id} to={"/restaurant/" + item.data.id}> <Cards item={item}  /></Link>
                         )
