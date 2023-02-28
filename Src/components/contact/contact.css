@@ -1,6 +1,6 @@
 .contact-container{
     background-color:  rgb(158, 139, 188);
-    height:76vh;
+    min-height:78vh;
     flex-direction: column;
     padding:2rem;
     margin-top: 70px;
@@ -54,3 +54,8 @@ textarea:focus {
     margin-top: 1rem;
     font-size: 1.2rem;
 }
+@media (max-width: 1200px) {
+    .form-container{
+        width:80%;
+    }
+    }

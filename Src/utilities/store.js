@@ -6,7 +6,4 @@ let store = configureStore({
         cart : cartSlice,
     }
 });
-
-
-
 export default store;

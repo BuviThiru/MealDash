@@ -39,6 +39,18 @@ body {
   margin-left: 4rem;
 }
 
+@media (max-width: 500px) {
+  .menu-card {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .menuImage {
+    display: none;
+  }
+}
+
 .cartItem-container {
   min-height: 83vh;
   width: 70%;
@@ -54,6 +66,7 @@ body {
 }
 
 .cart-right {
+  width: 40%;
   flex-direction: column;
   display: flex;
 }
@@ -120,12 +133,35 @@ body {
   }
 }
 
+@media (max-width: 1100px) {
+  .cartItem-container {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .cart-left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .cartItem-container {
+    margin-left: .5rem;
+  }
+
+  .cart-left {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 .eachItem-container {
   width: 50%;
   border: .5px solid #573b83;
   border-radius: 1rem;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin: 2rem auto;
+  margin-top: 2rem;
   padding: .5rem;
   display: flex;
 }
@@ -213,6 +249,12 @@ body {
   display: flex;
 }
 
+@media (max-width: 600px) {
+  .eachItem-container {
+    width: 20rem;
+  }
+}
+
 .restaurantDetails {
   min-height: 80vh;
   flex-direction: column;
@@ -221,7 +263,7 @@ body {
 }
 
 .top {
-  height: 15rem;
+  min-height: 15rem;
   color: #fff;
   background-color: #000;
   justify-content: space-around;
@@ -289,6 +331,8 @@ img {
 }
 
 .bottom {
+  align-items: center;
+  margin: 0;
   display: flex;
 }
 
@@ -298,7 +342,7 @@ img {
 
 .reatdetails-right {
   width: 30%;
-  background-color: #cbc5d5;
+  background-color: #dcccf7;
   flex-direction: column;
   margin: 0;
   padding: 2rem;
@@ -358,6 +402,48 @@ img {
   display: flex;
 }
 
+@media (max-width: 600px) {
+  .top {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .rest-image {
+    height: 9rem;
+    width: 15rem;
+    border-radius: 5px;
+  }
+
+  .restaName {
+    color: #fff;
+    text-shadow: 0 1px #ccc, 0 2px #ccc;
+    font-size: 1rem;
+  }
+
+  .area {
+    margin-top: .5rem;
+    font-size: .7rem;
+  }
+
+  .starBtn {
+    margin-top: .5rem;
+    margin-right: 0;
+  }
+
+  .reatdetails-right {
+    display: none;
+  }
+
+  .bottom {
+    width: 90%;
+  }
+}
+
+.menu-card-details {
+  width: 100%;
+  padding: .5rem;
+}
+
 .errImage {
   width: 50%;
   height: 50%;
@@ -400,8 +486,10 @@ err-container {
 .footer-container {
   height: 4rem;
   background-color: #573b83;
+  justify-content: center;
   align-items: center;
-  padding-right: 5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
   display: flex;
 }
 
@@ -416,10 +504,11 @@ err-container {
 }
 
 .about-container {
-  height: 80vh;
+  min-height: 82vh;
   color: #fff;
   background-color: #9e8bbc;
   flex-direction: column;
+  margin-top: 4rem;
   padding: 1rem;
   display: flex;
 }
@@ -454,8 +543,15 @@ err-container {
   font-size: 1.2rem;
 }
 
+@media (max-width: 800px) {
+  .about-details {
+    flex-direction: column;
+    display: flex;
+  }
+}
+
 .contact-container {
-  height: 76vh;
+  min-height: 78vh;
   background-color: #9e8bbc;
   flex-direction: column;
   margin-top: 70px;
@@ -509,6 +605,12 @@ textarea:focus {
   font-size: 1.2rem;
 }
 
+@media (max-width: 1200px) {
+  .form-container {
+    width: 80%;
+  }
+}
+
 .shimmerBox {
   height: 350px;
   width: 18rem;
@@ -548,7 +650,7 @@ textarea:focus {
 }
 
 .search {
-  width: 30%;
+  width: 50%;
   border: 1px solid #573b83;
   border-radius: 5px;
   padding: 10px 5px;
@@ -716,6 +818,71 @@ h3, h4, h5 {
   font-weight: bolder;
   position: absolute;
   top: 12px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin-bottom: 6px;
+  margin-left: 3rem;
+  display: block;
+}
+
+.list1 {
+  color: #fff;
+  width: 50%;
+  background-color: #573b83;
+  border: 1px solid #fff;
+  border-radius: 1rem 0 0 1rem;
+  margin-top: 28.4rem;
+  padding: 2rem;
+  list-style: none;
+  display: none;
+}
+
+.list1 a {
+  color: #fff;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.list1 li {
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  .rightHeader {
+    display: none;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    display: block;
+  }
+
+  .list1 {
+    display: block;
+  }
+}
+
+.cart-value1 {
+  color: #573b83;
+  width: .8rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  align-items: center;
+  padding: 6px;
+  font-size: 1rem;
+  font-weight: bolder;
+  position: absolute;
+  top: 30px;
 }
 
 /*# sourceMappingURL=index.75a90472.css.map */

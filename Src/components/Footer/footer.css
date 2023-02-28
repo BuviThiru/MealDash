@@ -1,17 +1,20 @@
-.footer-container{
-    background-color: rgb(87, 59, 131);
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    padding-right: 5rem;
+.footer-container {
+  background-color: rgb(87, 59, 131);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding-right: 0.5rem;
+  justify-content: center;
+  padding-left: 0.5rem;
 }
 
-.copyright{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    font-size: 0.9rem;
-    margin: auto 0 auto  auto;
-    word-spacing: 0.3rem;
-    letter-spacing: 0.1rem;
+.copyright {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 0.9rem;
+  margin: auto 0 auto auto;
+  word-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
 }
+

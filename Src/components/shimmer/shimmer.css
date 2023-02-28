@@ -1,24 +1,22 @@
- .shimmerBox{
-    height: 350px;
-    display: flex;
-    width: 18rem;
-    background-color: lightgray;
-    margin: 15px;
-    flex-wrap: wrap;
-    border: black solid 1px;
-    border-radius: 10px;
-  
-    
- }
+.shimmerBox {
+  height: 350px;
+  display: flex;
+  width: 18rem;
+  background-color: lightgray;
+  margin: 15px;
+  flex-wrap: wrap;
+  border: black solid 1px;
+  border-radius: 10px;
+}
 
- .shimmer{
-    display: flex;
-    flex-wrap: wrap;  
-    margin-top: 10rem;
-    justify-content: center;
- }
- .topBox{
-   height:40rem;
-   background-color: gray;
-   width: 100%;
- }
+.shimmer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10rem;
+  justify-content: center;
+}
+.topBox {
+  height: 40rem;
+  background-color: gray;
+  width: 100%;
+}

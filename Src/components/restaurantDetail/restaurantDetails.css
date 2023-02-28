@@ -7,7 +7,7 @@
 }
 .top {
   background-color: black;
-  height: 15rem;
+  min-height: 15rem;
   color: white;
   display: flex;
   justify-content: space-around;
@@ -72,6 +72,8 @@ img {
 }
 .bottom {
   display: flex;
+  margin: 0;
+  align-items: center;
 }
 
 .restdetails-left {
@@ -79,7 +81,7 @@ img {
 }
 
 .reatdetails-right {
-  background-color: rgb(203, 197, 213);
+  background-color: rgb(220, 204, 247);
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -130,4 +132,38 @@ img {
   font-size: 1rem;
   display: flex;
   margin: auto;
+}
+@media (max-width:600px) {
+  .top {    
+    display: flex;
+    flex-direction: column;   
+  }
+.rest-image{
+    border-radius: 5px;
+    height: 9rem;
+    width:15rem;
+  }
+  .restaName {
+    color: white;
+    font-size: 1rem;
+  text-shadow: 0px 1px 0px #ccc, 0px 2px 0px #ccc;}
+  .area{
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+  }
+  .starBtn{
+    margin-top: 0.5rem;
+    margin-right: 0;
+  }
+  .reatdetails-right{
+    display: none;
+  }
+  .bottom{
+    width: 90%;
+  }
+}
+
+.menu-card-details{
+  width: 100%;
+  padding: 0.5rem;
 }

@@ -1,8 +1,8 @@
 import './footer.css'
-const Footer = ()=>{
+const Footer = () => {
     return (
-        <div className="footer-container"> 
-            <h3 className="copyright">©2022-2023 BuvaneshwariThirumalaisamy Coimbatore,TN Inc. All Rights Reserved</h3>
+        <div className="footer-container">
+            <h3 className="copyright">©2022-2023 BuvaneshwariThirumalaisamy,TN Inc. All Rights Reserved</h3>
         </div>
     )
 }

@@ -7,13 +7,14 @@ import MenuItems from "../menuItems/MenuItems"
 import Shimmer2 from "../shimmer/Shimmer2"
 import { useDispatch, useSelector } from 'react-redux'
 import { addItem, removeItem } from '../../utilities/slice'
+import Shimmer from "../shimmer/Shimmer"
 
 
 const RestaurantDetail = () => {
     const cartItems = useSelector(store => store.cart.items)
     const dispatch = useDispatch()
     let { id } = useParams()
-    let loading = true
+
     function handleAddItem(cartItem) {
         dispatch(addItem(cartItem))
     }
@@ -21,20 +22,21 @@ const RestaurantDetail = () => {
     function handleMinus(cartItem) {
         dispatch(removeItem(cartItem.id))
     }
-    let [restaurantDetails, isLoading] = useRestaurant(id)
-    loading = isLoading
-   
+    let restaurantDetails = useRestaurant(id)
+
+
     let total = 0;
 
     if (!restaurantDetails) return null
 
     const totalQuantity = cartItems.reduce((total, item) => {
         return total + item.quantity;
-      }, 0);
-    return (!restaurantDetails ? <Shimmer2 /> :
+    }, 0);
+
+    return (!restaurantDetails ? <Shimmer /> :
         <div className="restaurantDetails">
             <div className="top">
-                <img src={imgURL + restaurantDetails?.cloudinaryImageId} alt="ResataurantImage" />
+                <img  className ="rest-image"src={imgURL + restaurantDetails?.cloudinaryImageId} alt="ResataurantImage" />
                 <div className="restaDetails">
                     <div className="restaName">{restaurantDetails?.name}</div>
                     <div className="minorDetails">
@@ -50,14 +52,14 @@ const RestaurantDetail = () => {
             <div className="bottom">
                 <div className="restdetails-left">
                     <h2 className="rest-heading">Menu</h2>
-                    <ul>
+                    <ul className="menu-card-details">
                         {Object.values(restaurantDetails?.menu?.items).map((item) => (
                             <li key={item.id} className="listMenu"><MenuItems item={item} /></li>
                         ))}
                     </ul>
                 </div>
-                {!cartItems.length>0 ?  <h2 className="reatdetails-right"> Add Items to the Cart </h2>:<div className="reatdetails-right">
-                    <h2 className="rest-cart-heading">Items in Cart -{totalQuantity }</h2>
+                {!cartItems.length > 0 ? <h2 className="reatdetails-right"> Add Items to the Cart </h2> : <div className="reatdetails-right">
+                    <h2 className="rest-cart-heading">Items in Cart - {totalQuantity}</h2>
                     {cartItems.map(function (cartItem, index) { total = total + (cartItem.price) / 100 * cartItem.quantity })}
                     <div className="rest-cart-container">{cartItems.map((cartItem) => <>
                         <h3 className="rest-cart-itemname">{cartItem.name}</h3>
@@ -65,10 +67,10 @@ const RestaurantDetail = () => {
                         <div className="rest-cart-itemdetails">
                             <button className='countDis btn-cart'><div onClick={() => handleMinus(cartItem)} className='minus'>-</div><div className='count'>{cartItem.quantity}</div><div onClick={() => handleAddItem(cartItem)} className='minus'>+</div></button>
                             <div>₹{cartItem.price * cartItem.quantity / 100}</div>
-                            
+
                         </div>
-                        <hr style={{borderTop: '1px solid black', width: '100%'}}/>                 
-                      
+                        <hr style={{ borderTop: '1px solid black', width: '100%' }} />
+
                     </>)}
                     </div>
                     <div className="rest-cart-total">Total : {total}</div>

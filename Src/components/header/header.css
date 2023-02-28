@@ -1,56 +1,118 @@
-.header{
-    height: 50px;
-    padding: 10px;
-    background-color:rgb(87, 59, 131);
-    margin:0;
-    display: flex;
-    justify-content: space-around;
-    color: white;
-    align-items:center ;
-    position: fixed;
-    top: 0px;
-    width: 100%;
+.header {
+  height: 50px;
+  padding: 10px;
+  background-color: rgb(87, 59, 131);
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
 }
 
-.logo{
-    height:5rem;
+.logo {
+  height: 5rem;
 }
 
-.list{
-    display:flex;
-    list-style: none;     
+.list {
+  display: flex;
+  list-style: none;
 }
 
-.list li{
-    margin:1.5rem;
-    font-size: 1.3rem;
- }
+.list li {
+  margin: 1.5rem;
+  font-size: 1.3rem;
+}
 
-.list li a{
-    text-decoration: none;
-    color: white;
+.list li a {
+  text-decoration: none;
+  color: white;
 }
 
 .cart-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .cart-value {
-    position: absolute;
-    top: 12px;
-    /* right:-1px; */
-    background-color: white;
-    color:rgb(87, 59, 131);
-    border-radius: 50%;
-    padding: 6px;
-    font-size: 1rem;
-    width:0.8rem;
-    align-items: center;
+  position: relative;
+  display: inline-block;
+}
+
+.cart-value {
+  position: absolute;
+  top: 12px;
+  background-color: white;
+  color: rgb(87, 59, 131);
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 1rem;
+  width: 0.8rem;
+  align-items: center;
   text-align: center;
   font-weight: bolder;
-  }
+}
+
+.cart-value {
+  margin-bottom: 1rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* Style the hamburger icon */
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin-bottom: 6px;
+  margin-left: 3rem;
   
-  .cart-value{
-    margin-bottom: 1rem;
+}
+.list1{
+  background-color: rgb(87, 59, 131);
+  color: white;
+  list-style: none;
+  margin-top: 28.4rem;
+  width:50%;
+  padding: 2rem;
+  display: none;
+  border: 1px solid white;
+  border-radius: 1rem 0 0 1rem;
+}
+.list1 a{
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+ 
+}
+.list1 li{
+  margin-top: 3rem;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  /* Hide the navigation menu */
+  .rightHeader {
+    display: none;
   }
+
+  /* Display the hamburger icon */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+.list1{
+  display: block;
+}}
+.cart-value1 {
+  position: absolute;
+  top: 30px;
+  background-color: white;
+  color: rgb(87, 59, 131);
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 1rem;
+  width: 0.8rem;
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+}

@@ -1,36 +1,45 @@
-.menu-card{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    border-radius: 1rem;
-    border: 1px solid rgb(87, 59, 131);
-    width: 30rem;
-    height: 7rem;
-    margin:1rem;
-    padding: 0.5rem;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  border: 1px solid rgb(87, 59, 131);
+  width: 30rem;
+  height: 7rem;
+  margin: 1rem;
+  padding: 0.5rem;
 }
-.menu-name{
-    color: rgb(87, 59, 131); 
-    font-size: 1.15rem;
-    font-weight: bolder;
-    margin-top: 0.2rem;  
+.menu-name {
+  color: rgb(87, 59, 131);
+  font-size: 1.15rem;
+  font-weight: bolder;
+  margin-top: 0.2rem;
 }
 
-.menu-desc{
+.menu-desc {
+  display: flex;
+  flex-wrap: wrap;
+  font-style: oblique;
+  margin-top: 0.4rem;
+}
+.price-details {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.vegIcon1 {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 4rem;
+}
+
+@media (max-width: 500px) {
+ .menu-card{
     display: flex;
-    flex-wrap: wrap;
-    font-style: oblique;
-    margin-top: 0.4rem; 
-}
-.price-details{
-    display: flex;
-    align-items: center;
-    margin-top: 0.5rem; 
-    /* justify-content: center; */
-}
-.vegIcon1{
-    width:1rem;
-    height:1rem;
-    margin-left: 4rem;
-}
+    flex-direction: column;
+    width:100%;
+  }
+  .menuImage{
+    display: none;
+  }
+  }
