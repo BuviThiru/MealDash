@@ -3,7 +3,7 @@
   justify-content: space-between;
   border: 0.5px solid rgb(87, 59, 131);
   padding: 0.5rem;
-  width: 50%;
+  width: 80%;
   margin-top: 2rem;
   border-radius: 1rem;
   flex-wrap: wrap;
@@ -12,6 +12,8 @@
   font-size: 1.2rem;
   font-weight: bolder;
   margin-bottom: 0.5rem;
+  /* display: flex; */
+  word-wrap: break-word;
 }
 .menu-category {
   font-size: 1rem;

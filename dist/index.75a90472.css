@@ -40,14 +40,29 @@ body {
 }
 
 @media (max-width: 500px) {
-  .menu-card {
+  .eachItem-contain {
     width: 100%;
+    flex-direction: column;
+    margin: auto;
+    display: flex;
+  }
+
+  .menu-card {
+    width: 80%;
+    min-height: 18rem;
     flex-direction: column;
     display: flex;
   }
 
-  .menuImage {
-    display: none;
+  .cart-left {
+    width: 90%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .right-menuitems, .price-details {
+    flex-direction: column;
+    display: flex;
   }
 }
 
@@ -79,9 +94,16 @@ body {
   border: none;
   border-radius: 1rem;
   margin-top: 2rem;
+  margin-left: 3rem;
   padding: 1rem;
   font-size: 1rem;
   display: block;
+}
+
+@media (max-width: 550px) {
+  .cart-left {
+    width: 100%;
+  }
 }
 
 .button-container {
@@ -156,7 +178,7 @@ body {
 }
 
 .eachItem-container {
-  width: 50%;
+  width: 80%;
   border: .5px solid #573b83;
   border-radius: 1rem;
   flex-wrap: wrap;
@@ -167,6 +189,7 @@ body {
 }
 
 .menuName {
+  word-wrap: break-word;
   margin-bottom: .5rem;
   font-size: 1.2rem;
   font-weight: bolder;
@@ -315,6 +338,17 @@ img {
   margin-right: 3rem;
 }
 
+.bottom {
+  display: flex;
+}
+
+.restdetails-left {
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .listMenu {
   list-style: none;
 }
@@ -330,23 +364,15 @@ img {
   display: flex;
 }
 
-.bottom {
-  align-items: center;
-  margin: 0;
-  display: flex;
-}
-
-.restdetails-left {
-  width: 70%;
-}
-
 .reatdetails-right {
   width: 30%;
+  min-height: 100vh;
   background-color: #dcccf7;
   flex-direction: column;
   margin: 0;
   padding: 2rem;
   display: flex;
+  right: 0;
 }
 
 .rest-cart-heading {
@@ -430,18 +456,28 @@ img {
     margin-right: 0;
   }
 
-  .reatdetails-right {
-    display: none;
+  .bottom {
+    width: 100%;
+    display: flex;
   }
 
-  .bottom {
+  .restdetails-left {
     width: 90%;
   }
 }
 
 .menu-card-details {
-  width: 100%;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
   padding: .5rem;
+  display: flex;
+}
+
+@media (max-width: 950px) {
+  .reatdetails-right {
+    display: none;
+  }
 }
 
 .errImage {

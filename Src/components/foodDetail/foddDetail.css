@@ -34,12 +34,33 @@
 }
 
 @media (max-width: 500px) {
+  .eachItem-contain{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    /* justify-content: center;
+    align-items: center; */
+  }
  .menu-card{
     display: flex;
     flex-direction: column;
-    width:100%;
+    width:80%;
+    min-height: 18rem;
+   
   }
-  .menuImage{
-    display: none;
+  .cart-left{
+    width:90%;
+    display: flex;
+    justify-content: center;
   }
+  .right-menuitems{
+    display: flex;
+    flex-direction: column;
+  }
+  .price-details{
+    display: flex;
+    flex-direction: column;
+  }
+
   }

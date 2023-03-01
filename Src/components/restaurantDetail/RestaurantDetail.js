@@ -36,7 +36,7 @@ const RestaurantDetail = () => {
     return (!restaurantDetails ? <Shimmer /> :
         <div className="restaurantDetails">
             <div className="top">
-                <img  className ="rest-image"src={imgURL + restaurantDetails?.cloudinaryImageId} alt="ResataurantImage" />
+                <img className="rest-image" src={imgURL + restaurantDetails?.cloudinaryImageId} alt="ResataurantImage" />
                 <div className="restaDetails">
                     <div className="restaName">{restaurantDetails?.name}</div>
                     <div className="minorDetails">
@@ -51,33 +51,34 @@ const RestaurantDetail = () => {
             </div>
             <div className="bottom">
                 <div className="restdetails-left">
-                    <h2 className="rest-heading">Menu</h2>
+
                     <ul className="menu-card-details">
                         {Object.values(restaurantDetails?.menu?.items).map((item) => (
                             <li key={item.id} className="listMenu"><MenuItems item={item} /></li>
                         ))}
                     </ul>
                 </div>
-                {!cartItems.length > 0 ? <h2 className="reatdetails-right"> Add Items to the Cart </h2> : <div className="reatdetails-right">
-                    <h2 className="rest-cart-heading">Items in Cart - {totalQuantity}</h2>
-                    {cartItems.map(function (cartItem, index) { total = total + (cartItem.price) / 100 * cartItem.quantity })}
-                    <div className="rest-cart-container">{cartItems.map((cartItem) => <>
-                        <h3 className="rest-cart-itemname">{cartItem.name}</h3>
-                        <h4 className="rest-cart-price">Price : ₹{cartItem.price / 100} each</h4>
-                        <div className="rest-cart-itemdetails">
-                            <button className='countDis btn-cart'><div onClick={() => handleMinus(cartItem)} className='minus'>-</div><div className='count'>{cartItem.quantity}</div><div onClick={() => handleAddItem(cartItem)} className='minus'>+</div></button>
-                            <div>₹{cartItem.price * cartItem.quantity / 100}</div>
+                <div className="reatdetails-right">
+                    {!cartItems.length > 0 ? <h2 > Add Items to the Cart </h2> : <div>
+                        <h2 className="rest-cart-heading">Items in Cart - {totalQuantity}</h2>
+                        {cartItems.map(function (cartItem, index) { total = total + (cartItem.price) / 100 * cartItem.quantity })}
+                        <div className="rest-cart-container">{cartItems.map((cartItem) => <>
+                            <h3 className="rest-cart-itemname">{cartItem.name}</h3>
+                            <h4 className="rest-cart-price">Price : ₹{cartItem.price / 100} each</h4>
+                            <div className="rest-cart-itemdetails">
+                                <button className='countDis btn-cart'><div onClick={() => handleMinus(cartItem)} className='minus'>-</div><div className='count'>{cartItem.quantity}</div><div onClick={() => handleAddItem(cartItem)} className='minus'>+</div></button>
+                                <div>₹{cartItem.price * cartItem.quantity / 100}</div>
 
+                            </div>
+                            <hr style={{ borderTop: '1px solid black', width: '100%' }} />
+
+                        </>)}
                         </div>
-                        <hr style={{ borderTop: '1px solid black', width: '100%' }} />
+                        <div className="rest-cart-total">Total : {total}</div>
+                        <Link to="/cart"><button className="go-to-cart">Go to Cart</button></Link>
 
-                    </>)}
-                    </div>
-                    <div className="rest-cart-total">Total : {total}</div>
-                    <Link to="/cart"><button className="go-to-cart">Go to Cart</button></Link>
-
-                </div>}
-
+                    </div>}
+                </div>
             </div>
         </div>
     )

@@ -40,7 +40,7 @@ const MenuItems = ({ item }) => {
             <div className='right-menuitems'>
                 {item.cloudinaryImageId && <img src={menu_img + item.cloudinaryImageId} alt="ResataurantImage" className='menuImage' />}
                 {!item.cloudinaryImageId && <img src={defaultMenu} alt="ResataurantImage" className='menuImage' />}
-                {<button className='countDis'><div onClick={() => handleMinus(item)} className='minus'>-</div><span className='count'>{getQuantityById(item.id)}</span><div onClick={() => handleAddItem(item)} className='minus'>+</div></button>}
+                {<button className='countDis menuAdd'><div onClick={() => handleMinus(item)} className='minus'>-</div><span className='count'>{getQuantityById(item.id)}</span><div onClick={() => handleAddItem(item)} className='minus'>+</div></button>}
             </div>
         </div >
     )
