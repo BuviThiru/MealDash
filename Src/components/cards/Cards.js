@@ -27,9 +27,5 @@ const Cards = ({item})=>{
 export default Cards
 
 
-{/* <ul>
-{Object.values(restaurantDetails?.menu?.items).map((item) => (
-  <li key={item.id}>{item.name}</li>
-))}
-</ul> */}
+
     
