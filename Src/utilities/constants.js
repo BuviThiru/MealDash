@@ -1,3 +1,3 @@
-export const Restaurant_Details_URl = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=11.0168445&lng=76.9558321&catalog_qa=undefined&submitAction=ENTER&restaurantId="
+export const Restaurant_Details_URl = "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=11.0168445&lng=76.9558321&catalog_qa=undefined&submitAction=ENTER&restaurantId="
 export const imgURL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/"
 export let menu_img = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/"

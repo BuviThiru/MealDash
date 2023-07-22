@@ -288,7 +288,7 @@ body {
 .top {
   min-height: 15rem;
   color: #fff;
-  background-color: #000;
+  background-color: #a28dc4;
   justify-content: space-around;
   padding: 1rem 10%;
   display: flex;
@@ -367,7 +367,7 @@ img {
 .reatdetails-right {
   width: 30%;
   min-height: 100vh;
-  background-color: #dcccf7;
+  background-color: #573b83;
   flex-direction: column;
   margin: 0;
   padding: 2rem;
@@ -393,6 +393,7 @@ img {
 }
 
 .rest-cart-price {
+  color: #fff;
   margin-bottom: 2rem;
 }
 

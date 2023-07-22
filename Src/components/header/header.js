@@ -13,7 +13,7 @@ function Header() {
         setIsopen(!isopen)
     }
     const cartItems = useSelector(store => store.cart.items)
-    // console.log(cartItems)
+ 
     const totalQuantity = cartItems.reduce((total, item) => {
         return total + item.quantity;
     }, 0);

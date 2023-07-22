@@ -6,7 +6,7 @@
   margin-top: 70px;
 }
 .top {
-  background-color: black;
+  background-color:  rgb(162, 141, 196);
   min-height: 15rem;
   color: white;
   display: flex;
@@ -86,7 +86,7 @@ img {
   list-style: circle;
 }
 .reatdetails-right {
-  background-color: rgb(220, 204, 247);
+  background-color: rgb(87, 59, 131);
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -111,6 +111,7 @@ img {
 }
 .rest-cart-price {
   margin-bottom: 2rem;
+  color: white;
 }
 .rest-cart-itemdetails {
   display: flex;

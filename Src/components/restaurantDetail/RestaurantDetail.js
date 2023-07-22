@@ -67,7 +67,7 @@ const RestaurantDetail = () => {
       <div className="bottom">
         <div className="restdetails-left">
         <ul className="menu-card-details">
-            {console.log(itemCards)}
+            {/* {console.log(itemCards)} */}
                         {Object.values(itemCards).map((item) => (
                             <li key={item.id} className="listMenu"><MenuItems item={item} /></li>
                         ))}
@@ -107,7 +107,7 @@ const RestaurantDetail = () => {
                           +
                         </div>
                       </button>
-                      <div>₹{(cartItem.price * cartItem.quantity) / 100}</div>
+                      <div className="rest-cart-price">₹{(cartItem.price * cartItem.quantity) / 100}</div>
                     </div>
                     <hr
                       style={{ borderTop: "1px solid black", width: "100%" }}
