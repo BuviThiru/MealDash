@@ -17,8 +17,9 @@ const Body = () => {
     async function getData() {
         let data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.933524&lng=76.9311761&page_type=DESKTOP_WEB_LISTING")
         let json = await data.json()
-        console.log(">>>>>>>>>>>>>>>",json)
-        let array = json?.data?.cards[2]?.data?.data?.cards || json?.data?.cards[1]?.data?.data?.cards
+       
+        let array =  json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        // console.log(">>>>>>>>>>>>>>>",array)
         setAllrestaurants(array)
         setFilteredRestaurants(array)
     }
@@ -39,9 +40,10 @@ const Body = () => {
 
                     {(filteredRestaurants.length === 0) ? <h1>No Match Found</h1> :
                         filteredRestaurants.map((item) => {
-
+                          
                             return (
-                                <Link key={item.data.id} to={"/restaurant/" + item.data.id}> <Cards item={item} /></Link>
+                              
+                                <Link key={item.info.id} to={"/restaurant/" + item.info.id}> <Cards item={item.info} /></Link>
                             )
                         })}
                 </div>

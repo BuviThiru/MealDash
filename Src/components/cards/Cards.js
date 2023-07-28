@@ -3,20 +3,20 @@ import {imgURL} from '../../utilities/constants'
 
 const Cards = ({item})=>{
     // console.log(item)
-  let arr = item.data.cuisines
+  let arr = item.cuisines
     return(
         <div className ="cards">
             <div className="individual-card .shadow-button ">
-            <img src={imgURL+item.data.cloudinaryImageId} alt="restaurantImages" />
+            <img src={imgURL+item.cloudinaryImageId} alt="restaurantImages" />
             <div className="details">
-            <h3 className="restName">{item.data.name}</h3>
+            <h3 className="restName">{item.name}</h3>
             <div className="cuisins">{arr.map((keys,index)=> {return <h3 key ={index} className="cusinItems">•{keys}</h3>})}</div>
-            <h3 className="place">{item.data.area}</h3>
+            <h3 className="place">{item.area}</h3>
             </div>
             <div className="bottomline">
-            <button className="star">{item.data.avgRating}✰</button>
-            <h5>{item.data.slaString}</h5>
-            <h5>{item.data.costForTwoString}</h5> 
+            <button className="star">{item.avgRating}✰</button>
+            <h5>{item.slaString}</h5>
+            <h5>{item.costForTwoString}</h5> 
             
             </div>
             </div>

@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux'
 
 
 const MenuItems = ({ item }) => {
-console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>ITEM",item)
+// console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>ITEM",item)
     const dispatch = useDispatch()
     const cartItems = useSelector(store => store.cart.items)
     function handleAddItem(item) {
@@ -24,7 +24,8 @@ console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>ITEM",item)
         return item ? item.quantity : "Add";
     }
 
-    let price = item.card.info.price
+    let price 
+     if(item?.card?.info?.price) {price = item?.card?.info?.price } else price= item?.card?.info?.defaultPrice
 
 
     return (
