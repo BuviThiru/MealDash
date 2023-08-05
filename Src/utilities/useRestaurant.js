@@ -16,7 +16,7 @@ const useRestaurant = (id) => {
         let json = await data.json()       
         setRestaurentDetails(json.data.cards)
     }
-    console.log(restaurantDetails)
+    // console.log(restaurantDetails)
 
     return restaurantDetails
 

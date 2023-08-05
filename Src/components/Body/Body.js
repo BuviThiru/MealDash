@@ -4,6 +4,8 @@ import "./body.css"
 import { filterRestaurant } from '../../utilities/filterFunction'
 import Shimmer from "../shimmer/Shimmer"
 import { Link } from "react-router-dom"
+import { cards } from "../../utilities/data"
+
 
 const Body = () => {
     const [searchData, setSearchData] = useState("")
@@ -15,11 +17,11 @@ const Body = () => {
     }), [])
 
     async function getData() {
-        let data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.933524&lng=76.9311761&page_type=DESKTOP_WEB_LISTING")
+        let data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.0168445&lng=76.9558321&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         let json = await data.json()
-       
-        let array =  json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-        // console.log(">>>>>>>>>>>>>>>",array)
+   
+        let array =  json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || cards
+        console.log(">>>>>>>>>>>>>>>",array)
         setAllrestaurants(array)
         setFilteredRestaurants(array)
     }

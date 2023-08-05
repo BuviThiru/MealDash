@@ -26,7 +26,7 @@ const RestaurantDetail = () => {
 
 
   const restaurantDetails = useRestaurant(id)
-  console.log(restaurantDetails);
+  // console.log(restaurantDetails);
   if (restaurantDetails === null) return <Shimmer />;
 //   console.log(restaurantDetails[0]?.card?.card?.info);
 

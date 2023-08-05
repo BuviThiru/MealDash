@@ -17,7 +17,7 @@ function Header() {
     const totalQuantity = cartItems.reduce((total, item) => {
         return total + item.quantity;
     }, 0);
-    console.log(isopen)
+    // console.log(isopen)
     return (
         <section className="header">
             <div>
